@@ -36,7 +36,7 @@ this Python class.
 
 
 from weapon_type import WeaponType
-
+from fichero import leer
 
 class Pokemon():
 
@@ -60,8 +60,15 @@ class Pokemon():
         else:
             return True
     
+    def crear_pokemon(self, numero):
+        self.id = leer.lista[numero][0]
+        self.name = leer.lista[numero][1]
+        self.hp = leer.lista[numero][3]
+        self.attack = leer.lista[numero][4]
+        self.defense = leer.lista[numero][5]
+    
     def fight_attack(self, pokemon, pokemon2):
-        
+
 
     def fight_defense(self, int points_of_damage):
     """Python class to implement a basic version of a Pokemon of the game.
