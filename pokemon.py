@@ -59,18 +59,31 @@ class Pokemon():
             return False
         else:
             return True
-    
-    def crear_pokemon(self, numero):
-        self.id = leer.lista[numero][0]
-        self.name = leer.lista[numero][1]
-        self.hp = leer.lista[numero][3]
-        self.attack = leer.lista[numero][4]
-        self.defense = leer.lista[numero][5]
-    
-    def fight_attack(self, pokemon, pokemon2):
+
+    def fight_defense(self, pokemon1, pokemon2):
+        while True:
+            turno = input('¿A qué pokemon le toca atacar?(1/2)')
+            try:
+                turno == 1 or turno ==2
+            except:
+                pass
+            else:
+                break
+        if turno == 1:
+            if pokemon1.attack < pokemon2.defense:
+                return False
+            else:
+                return True
+        
+    def fight_attack(self, pokemon1, pokemon2):
+        if self.fight_defense == False:
+            return False
+        else:
+            pokemon2.hp = pokemon2.hp - (pokemon1.attack - pokemon2.defense)
 
 
-    def fight_defense(self, int points_of_damage):
+
+    
     """Python class to implement a basic version of a Pokemon of the game.
 
     This Python class implements the basic version of a Pokemon of the game.

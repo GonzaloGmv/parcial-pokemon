@@ -31,7 +31,28 @@ This Python method contains the application of the Game.
 
 
 # Source packages.
+from pokemon import *
 
+
+def crear_pokemon(columna, fila):
+  atributo = leer('coach_1_pokemons.csv')
+  atributo.lista[columna][fila]
+
+id1 = crear_pokemon(0, 0)
+name1 = crear_pokemon(0, 1)
+weapon1 = crear_pokemon(0, 2)
+hp1 = crear_pokemon(0, 3)
+attack1 = crear_pokemon(0, 4)
+defense1 = crear_pokemon(0, 5)
+pokemon1 = Pokemon(id1, name1, weapon1, hp1, attack1, defense1)
+
+id2 = crear_pokemon(1, 0)
+name2 = crear_pokemon(1, 1)
+weapon2 = crear_pokemon(1, 2)
+hp2 = crear_pokemon(1, 3)
+attack2 = crear_pokemon(1, 4)
+defense2 = crear_pokemon(1, 5)
+pokemon2 = Pokemon(id2, name2, weapon2, hp2, attack2, defense2)
 
 
 def get_data_from_user(name_file):
