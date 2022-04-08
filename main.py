@@ -1,5 +1,6 @@
 from clases.pokemon import *
 from clases.fichero import *
+import random
 
 
 def crear_pokemon(columna, fila, archivo):
@@ -69,6 +70,11 @@ def main():
     print("------------------------------------------------------------------")
     print("The Game starts...")
     print("------------------------------------------------------------------")
+
+    turno = random.randint(0,1)
+    if turno == 1:
+      Pokemon.fight_defense(pokemon1, pokemon2)
+
 
 
     print("------------------------------------------------------------------")
